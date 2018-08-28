@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/doit3-common/doit3-common.iml" filepath="$PROJECT_DIR$/doit3-common/doit3-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager-dao/doit3-manager-dao.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager-dao/doit3-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager-interface/doit3-manager-interface.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager-interface/doit3-manager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager-pojo/doit3-manager-pojo.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager-pojo/doit3-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager-service/doit3-manager-service.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager-service/doit3-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager-web/doit3-manager-web.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager-web/doit3-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-parent/doit3-parent.iml" filepath="$PROJECT_DIR$/doit3-parent/doit3-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-portal/doit3-portal.iml" filepath="$PROJECT_DIR$/doit3-portal/doit3-portal.iml" />
+    </modules>
+  </component>
+</project>
