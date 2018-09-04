@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+        <!--加载db.properties文件-->
+    <context:property-placeholder location="classpath:db.properties"/>
+   <!--配置数据库连接池-->
+    <bean id="dataSource"  class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+    <!--配置基本属性-->
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!--配置优化属性 自动提交关闭-->
+        <property name="defaultAutoCommit" value="false"/>
+    </bean>
+    <!--配置mybatis会话工厂-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+       <!--配置数据源-->
+        <property name="dataSource" ref="dataSource"/>
+        <!--加载mybaits的主配置文件-->
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
+     </bean>
+    <!--配置dao层接口扫描包-->
+    <!--只有配置了本类,dao层接口才不需要实现类-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+    <!--注入会话工厂 不要用过期的那个 记住后面的是value 因为需要一个string类型的变量-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+            <!--注入扫描基础包的位置 会扫描value包里的所有类和包-->
+        <property name="basePackage" value="com.qf.shop.manager.dao"/>
+    </bean>
+    <!--扫描其它注解类-->
+<context:component-scan base-package="com.qf.shop.manager.dao"/>
+
+</beans>
