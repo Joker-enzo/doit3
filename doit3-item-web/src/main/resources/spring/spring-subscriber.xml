@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+       ">
+    <!--获取第一个连接工厂-->
+    <bean id="targetFactoryConnection" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="tcp://39.106.165.75:61616"/>
+    </bean>
+    <!--获取连接对象-->
+    <bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
+        <property name="targetConnectionFactory" ref="targetFactoryConnection"/>
+    </bean>
+
+    <!--配置目标对象 queue topic Destination-->
+    <bean class="org.apache.activemq.command.ActiveMQTopic" id="topicDestination">
+
+    <constructor-arg value="itemAddTopic1"/>
+
+    </bean>
+    <!--订阅者端要配置自定义的监听器-->
+    <bean id="generateHtmlMessageListener" class="com.qf.shop.item.listener.GenerateHtmlMessageListener"></bean>
+    <!--配置默认的消息监听容器 将以上三个bean注入到default的监听容器中-->
+    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="destination" ref="topicDestination"/>
+        <property name="messageListener" ref="generateHtmlMessageListener"/>
+
+    </bean>
+
+</beans>

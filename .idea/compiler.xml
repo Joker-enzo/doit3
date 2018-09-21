@@ -14,7 +14,7 @@
       <entry name="!?*.aj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile default="true" name="Default" enabled="false">
+      <profile default="true" name="Default" enabled="true">
         <processorPath useClasspath="true" />
       </profile>
       <profile default="false" name="Annotation profile for doit3-manager-web" enabled="true">
@@ -59,9 +59,67 @@
         <processorPath useClasspath="true" />
         <module name="doit3-manager-pojo" />
       </profile>
+      <profile default="false" name="Annotation profile for serch-web" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for doit-search-web" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="doit-search-web" />
+      </profile>
+      <profile default="false" name="Annotation profile for doit3-freemarker" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for doit3-freemarker1" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Annotation profile for doit3-item-web" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="doit3-item-web" />
+      </profile>
+      <profile default="false" name="Annotation profile for doit3-search-web" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="doit3-search-web" />
+      </profile>
+      <profile default="false" name="Annotation profile for doit3-provider" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="doit3-provider" />
+      </profile>
+      <profile default="false" name="Annotation profile for doit3-consumer" enabled="true">
+        <sourceOutputDir name="target\generated-sources\annotations" />
+        <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="doit3-consumer" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="doit-search-web" target="1.8" />
       <module name="doit3-common" target="1.8" />
+      <module name="doit3-consumer" target="1.8" />
+      <module name="doit3-freemarker" target="1.8" />
+      <module name="doit3-freemarker1" target="1.8" />
+      <module name="doit3-item-web" target="1.8" />
       <module name="doit3-manager" target="1.8" />
       <module name="doit3-manager-dao" target="1.8" />
       <module name="doit3-manager-interface" target="1.8" />
@@ -70,6 +128,9 @@
       <module name="doit3-manager-web" target="1.8" />
       <module name="doit3-parent" target="1.8" />
       <module name="doit3-portal" target="1.8" />
+      <module name="doit3-provider" target="1.8" />
+      <module name="doit3-search-web" target="1.8" />
+      <module name="serch-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

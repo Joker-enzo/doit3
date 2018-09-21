@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+       ">
+    <!--获取第一个连接工厂-->
+    <bean id="targetFactoryConnection" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="tcp://39.106.165.75:61616"/>
+    </bean>
+    <!--获取连接对象-->
+    <bean id="connectionFactory" class="org.springframework.jms.connection.SingleConnectionFactory">
+        <property name="targetConnectionFactory" ref="targetFactoryConnection"/>
+    </bean>
+
+    <!--配置目标对象 queue topic Destination-->
+    <bean class="org.apache.activemq.command.ActiveMQTopic" id="topicDestination">
+
+    <constructor-arg value="itemAddTopic1"/>
+
+    </bean>
+
+    <!--配置JMS模板-->
+    <bean class="org.springframework.jms.core.JmsTemplate" id="jmsTemplate">
+
+    <property name="connectionFactory" ref="connectionFactory"/>
+        </bean>
+</beans>

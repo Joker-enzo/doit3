@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="doit3-freemarker:war">
+    <output-path>$PROJECT_DIR$/doit3-freemarker/target</output-path>
+    <root id="archive" name="doit3-freemarker.war">
+      <element id="artifact" artifact-name="doit3-freemarker:war exploded" />
+    </root>
+  </artifact>
+</component>

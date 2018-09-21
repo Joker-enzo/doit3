@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://code.alibabatech.com/schema/dubbo
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--在注册中心注册了两个服务-->
+     <!--配置注册中心，因为使用的是zookeeper作为注册中心，所以是zookeeper协议的-->
+    <dubbo:registry address="zookeeper://39.106.165.75:2181"/>
+    <!--配置实现类-->
+    <bean class="com.qf.shop.service.impl.DemoServiceImpl" id="demoService"/>
+    <bean class="com.qf.shop.service.impl.HelloServiceImpl" id="helloService"/>
+    <!--配置应用名称,提供方的应用名称-->
+    <dubbo:application name="myprovider"/>
+    <!--暴露出去的接口,以后在消费方是通过这个接口进行调用的，interface表示接口，ref指向的是这个接口的实现类bean-->
+    <dubbo:service ref="demoService" interface="com.qf.shop.service.DemoService"/>
+    <dubbo:service ref="helloService" interface="com.qf.shop.service.HelloService"/>
+    <!--配置协议 暴露dubbo端口号-->
+    <dubbo:protocol name="dubbo" port="20880"/>
+
+</beans>

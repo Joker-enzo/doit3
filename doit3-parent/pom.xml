@@ -11,6 +11,13 @@
         <module>../doit3-common</module>
         <module>../doit3-manager</module>
         <module>../doit3-portal</module>
+        <module>../doit3-search-web</module>
+        <module>../doit3-freemarker</module>
+        <module>../doit3-item-web</module>
+        <module>../doit3-provider</module>
+        <module>../doit3-consumer</module>
+
+
     </modules>
     <packaging>pom</packaging>
 
@@ -44,7 +51,7 @@
         <jedis.version>2.9.0</jedis.version>
         <solrj.version>4.10.3</solrj.version>
         <dubbo.version>2.6.0</dubbo.version>
-        <zookeeper.version>3.4.11</zookeeper.version>
+        <zookeeper.version>3.4.12</zookeeper.version>
         <zkclient.version>0.1</zkclient.version>
         <activemqcore.version>5.7.0</activemqcore.version>
         <activemqpool.version>5.15.2</activemqpool.version>

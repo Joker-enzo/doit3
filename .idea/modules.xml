@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/doit3-common/doit3-common.iml" filepath="$PROJECT_DIR$/doit3-common/doit3-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-consumer/doit3-consumer.iml" filepath="$PROJECT_DIR$/doit3-consumer/doit3-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-freemarker/doit3-freemarker.iml" filepath="$PROJECT_DIR$/doit3-freemarker/doit3-freemarker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-item-web/doit3-item-web.iml" filepath="$PROJECT_DIR$/doit3-item-web/doit3-item-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager-dao/doit3-manager-dao.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager-dao/doit3-manager-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager-interface/doit3-manager-interface.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager-interface/doit3-manager-interface.iml" />
@@ -11,6 +14,8 @@
       <module fileurl="file://$PROJECT_DIR$/doit3-manager/doit3-manager-web/doit3-manager-web.iml" filepath="$PROJECT_DIR$/doit3-manager/doit3-manager-web/doit3-manager-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit3-parent/doit3-parent.iml" filepath="$PROJECT_DIR$/doit3-parent/doit3-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/doit3-portal/doit3-portal.iml" filepath="$PROJECT_DIR$/doit3-portal/doit3-portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-provider/doit3-provider.iml" filepath="$PROJECT_DIR$/doit3-provider/doit3-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doit3-search-web/doit3-search-web.iml" filepath="$PROJECT_DIR$/doit3-search-web/doit3-search-web.iml" />
     </modules>
   </component>
 </project>
